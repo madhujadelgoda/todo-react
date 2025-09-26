@@ -50,7 +50,7 @@ This app features:
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone <repo-url>
 
 # Navigate to project folder
 cd todo-react
