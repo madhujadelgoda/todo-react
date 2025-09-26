@@ -1,0 +1,102 @@
+/* App.css */
+
+/* Global font and background */
+body, html {
+  font-family: 'Inter', sans-serif;
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  background: #fff;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container wrapper to handle scrolling if content grows */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* small padding for mobile */
+  box-sizing: border-box;
+}
+
+/* Card container */
+.todo-container {
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(10px);          /* glass blur */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.todo-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* Title */
+.todo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: #001d3d;
+  /* background: linear-gradient(90deg, #667eea, #764ba2); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.todo-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-btn:hover {
+  transform: scale(1.05);
+}
+
+.todo-btn-active {
+  background-color: #4f46e5; /* indigo-600 */
+  color: #fff;
+}
+
+.todo-btn-inactive {
+  background-color: #f1f5f9; /* slate-100 */
+  color: #374151;
+}
+
+/* Task list smooth animation */
+.todo-list-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.todo-list-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+/* Clear completed button */
+.clear-btn {
+   padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.9rem;
+  color: #dc2626; /* red-600 */
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.clear-btn:hover {
+  opacity: 0.7;
+}

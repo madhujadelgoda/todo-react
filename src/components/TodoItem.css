@@ -1,0 +1,106 @@
+/* TodoItem.css */
+
+/* Task row */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.6rem;
+  transition: background 0.2s;
+}
+
+.todo-item:hover {
+  background: #f9fafb; /* slate-50 */
+}
+
+/* Left side with checkbox + text */
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Checkbox */
+.todo-checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #6366f1; /* indigo-500 */
+  cursor: pointer;
+}
+
+/* Task text */
+.todo-text {
+  font-size: 1rem;
+}
+
+.todo-completed {
+  text-decoration: line-through;
+  color: #9ca3af; /* slate-400 */
+}
+
+/* Editing input */
+.todo-edit-input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db; /* slate-300 */
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.todo-edit-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* Buttons */
+.todo-btn {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Add gap between buttons */
+.todo-btn + .todo-btn {
+  margin-left: 0.5rem; /* 8px gap between buttons */
+}
+
+/* Action buttons */
+.btn-edit {
+  color: #374151; /* slate-700 */
+}
+
+.btn-edit:hover {
+  color: #1f2937; /* slate-800 */
+  background: #f3f4f6; /* slate-100 */
+}
+
+.btn-delete {
+  color: #dc2626; /* red-600 */
+}
+
+.btn-delete:hover {
+  color: #b91c1c; /* red-700 */
+  background: #fee2e2; /* red-100 */
+}
+
+.btn-save {
+  color: #4f46e5; /* indigo-600 */
+}
+
+.btn-save:hover {
+  background: #e0e7ff; /* indigo-100 */
+}
+
+.btn-cancel {
+  color: #6b7280; /* slate-500 */
+}
+
+.btn-cancel:hover {
+  background: #f3f4f6;
+}
+
